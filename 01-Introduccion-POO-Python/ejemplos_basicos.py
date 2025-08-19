@@ -16,7 +16,7 @@ print("\n1. CREACIÓN DE UNA CLASE Y OBJETOS")
 print("-" * 40)
 
 class Persona:
-    def __init__(self, nombre:str, edad:int):
+    def __init__(self, nombre:str, edad:int) ->none:
         self.nombre = nombre
         self.edad = edad
 
@@ -37,11 +37,11 @@ print("\n2. ENCAPSULACIÓN")
 print("-" * 40)
 
 class CuentaBancaria:
-    def __init__(self, titular:str, saldo:int):
+    def __init__(self, titular:str, saldo:int) -> none:
         self.titular = titular
         self.__saldo = saldo  # Atributo privado
 
-    def depositar(self, cantidad:int) ->int:
+    def depositar(self, cantidad:int) ->float:
         self.__saldo += cantidad
 
     def retirar(self, cantidad:int) -> str:
@@ -70,10 +70,10 @@ print("\n3. HERENCIA")
 print("-" * 40)
 
 class Animal:
-    def __init__(self, nombre:str):
+    def __init__(self, nombre:str) ->none:
         self.nombre = nombre
 
-    def hacer_sonido(self:str) -> str:
+    def hacer_sonido(self) -> str:
         return "Hace un sonido."
 
 class Perro(Animal):
@@ -81,7 +81,7 @@ class Perro(Animal):
         return "Guau 🐶"
 
 class Gato(Animal):
-    def hacer_sonido(self):
+    def hacer_sonido(self) ->str:
         return "Miau 🐱"
 
 # Crear instancias
@@ -110,18 +110,18 @@ print("\n5. SISTEMA COMPLETO DE VEHÍCULOS")
 print("-" * 40)
 
 class Vehiculo:
-    def __init__(self, marca, modelo):
+    def __init__(self, marca:str, modelo:str) ->none:
         self.marca = marca
         self.modelo = modelo
 
-    def descripcion(self):
+    def descripcion(self) -> str:
         return f"{self.marca} {self.modelo}"
 
 class Carro(Vehiculo):
-    def descripcion(self):
+    def descripcion(self) ->str:
         return f"Carro: {self.marca} {self.modelo}"
 
-class Moto(Vehiculo):
+class Moto(Vehiculo) ->str:
     def descripcion(self):
         return f"Moto: {self.marca} {self.modelo}"
 
